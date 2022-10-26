@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ihre E-Mensa</title>
+    <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="logo.png" alt="There was supposed to be a logo">
+            <ul id="navigation">
+                <a href="#ankundigung"> <li> Ankündigung </li></a>
+                <a href="#speisen"> <li> Speisen </li></a>
+                <a href="#zahlen"> <li>Zahlen </li></a>
+                <a href="#kontakt"> <li>Kontakt</li></a>
+                <a href="#wichtig"> <li>Wichtig für Uns </li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="ankundigung">
+            <h1>Bald gibt es Essen auch Online ;)</h1>
+            <img id="soon" src="coming_soon.gif" alt="This is an animated gif image, but it does not move" width=900/>
+        </section>
+
+        <section id="speisen">
+            <h1>Köstlichkeiten, die Sie erwarten</h1>
+            <table id="speisekarte">
+                <thead>
+                <tr>
+                    <th>Gericht</th>
+                    <th>Preis intern</th>
+                    <th>Preis extern</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bunter Gemüseauflauf mit Schmand und Käse überbacken dazu eine Scheibe Schwarzbrot</td>
+                    <td>2.50</td>
+                    <td>3.70</td>
+                </tr>
+                <tr>
+                    <td>Rindereintopf mit Rotwein und südländischen Kräutern</td>
+                    <td>2.80</td>
+                    <td>3.90</td>
+                </tr>
+                <tr>
+                    <td>Fischeintopf mit geräuchterem Forellenfillet auf dampfendem Gemüse</td>
+                    <td>3.50</td>
+                    <td>4.20</td>
+                </tr>
+                <tr>
+                    <td>Heiße Käsetunke mit geschmolzenem Käse in Brotlaib serviert</td>
+                    <td>2.20</td>
+                    <td>3.10</td>
+                </tr>
+                <tr>
+                    <td>Sphagetti mit Rindfrikaddelen und scharfe Tomatensoße oder cremige Pilzensoße</td>
+                    <td>2.60</td>
+                    <td>3.50</td>
+                </tr>
+                <tr>
+                    <td>Brattkartoffel mit Wienerschnitzel aus Schwein dazu Sauerkraut</td>
+                    <td>3.50</td>
+                    <td>4.20</td>
+                </tr>
+                <tr>
+                    <td>Käsekuchen</td>
+                    <td>2.00</td>
+                    <td>2.70</td>
+                </tr>
+                <tr>
+                    <td>Schwarzwalderschnitt</td>
+                    <td>2.10</td>
+                    <td>2.80</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="zahlen">
+            <h1>E-Mensa in Zahlen</h1>
+            <label> x Besuche</label>
+            <label> y Anmeldungen zum Newsletter</label>
+            <label> z Speisen</label>
+        </section>
+
+        <section id="kontakt">
+            <h1>Interesse geweckt? Wir informieren Sie!</h1>
+            <form method="post" id="newsletter">
+
+                <label class="oberschrifft" for="name">Ihr Name:</label>
+                <input class="oberschrifftbox" type="text" id="name" name="name" required>
+
+                <label class="oberschrifft" for="email">Ihre E-Mail:</label>
+                <input class="oberschrifftbox" type="text" id="email" name="email" required>
+
+                <label class="oberschrifft" for="sprache">Newsletter bitte in:</label>
+                <select class="oberschrifftbox" name="sprache" id="sprache">
+                    <option value="de">Deutsch</option>
+                    <option value="eng">Englisch</option>
+                </select>
+                <br><br><br>
+                <input type="checkbox" id="dtschutz" name="dtschutz" required>
+                <label for="dtschutz">Den Datenschutzbestimmungen stimme ich zu</label>
+                <button id="btn_anmd" type="submit" form="newsletter" value="test" disabled="disabled">Zum Newsletter anmelden</button>
+            </form>
+        </section>
+
+        <section id="wichtig">
+            <h1>Das ist uns wichtig</h1>
+            <ul>
+                <li>Regionale frische Zutaten</li>
+                <li>Ausgewogene Mahlzeiten</li>
+                <li>Hohes Serviceniveau</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <ul class="horizontal-list">
+            <li>(c) E-Mensa GmbH</li>
+            <li>Ivan Volkov</li>
+            <li>Max Gerdes</li>
+            <li>Impressum</li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>

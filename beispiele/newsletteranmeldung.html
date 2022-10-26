@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+- Praktikum DBWT. Autoren:
+- Ivan, Volkov, 3519680
+- Max, Gerdes, 3516014
+-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmeldung</title>
+ </head>
+<body>
+<form action="beispiele/formdata.html" method="post" id="anmeldung">
+  <p>
+    <label>Anrede:</label> <br>
+    <input type="radio" id="frau" name="Anrede" value="Frau">
+    <label for="frau">Frau</label><br>
+    <input type="radio" id="herr" name="Anrede" value="Herr">
+    <label for="herr">Herr</label><br>
+  </p>
+
+  <label for="fname">Vorname*:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">Nachname*:</label><br>
+  <input type="text" id="lname" name="lname" required> <br>
+  <label for="email">E-Mail*:</label><br>
+  <input type="text" id="email" name="email" required> <br>
+
+  <p>
+    <label for="interval">Benachrichtigungsinterval</label> <br>
+    <select name="interval" id="interval">
+      <option value="tag">Tag</option>
+      <option value="woche">Woche</option>
+      <option value="monat">Monat</option>
+    </select>
+  </p>
+
+  <input type="checkbox" id="dtschutz" name="dtschutz" required>
+  <label for="dtschutz">Datenschutzhinweise gelesen</label> <br>
+  <br>
+  <button type="submit" form="anmeldung" value="abschicken">Abschicken</button> <br>
+  <br>
+  <label>*)Eingaben sind Pflich</label>
+</form>
+</body>
+</html>

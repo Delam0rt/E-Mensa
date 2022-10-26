@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+- Praktikum DBWT. Autoren:
+- Ivan, Volkov, 3519680
+- Max, Gerdes, 3516014
+-->
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="grid-container">
+      <div id="l">Links</div>
+      <div id="r">Rechts</div>
+      <div id="m">Mitte</div>
+      <div id="o">Oben</div>
+      <div id="u">Unten</div>
+    </div>
+</body>
+
+<style>
+    #m{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #l{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    #r{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    #o{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    #u{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+  #grid-container {
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: 50px auto 50px;
+  }
+</style>
+
+</html>

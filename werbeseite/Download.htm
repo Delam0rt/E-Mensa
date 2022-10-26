@@ -1,0 +1,3224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="de-DE">
+<head>
+
+<meta charset="utf-8">
+<!-- 
+	{$config.headerComment}
+
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2022 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+<link rel="shortcut icon" href="/typo3conf/ext/fhac_design_2012/Resources/Public/Icons/favicon.ico" type="image/png">
+<title>FH Aachen - University of Applied Sciences: FH Aachen</title>
+<meta http-equiv="x-ua-compatible" content="IE=edge" />
+<meta name="generator" content="TYPO3 CMS" />
+<meta name="description" content="Wir bieten ein Studium in den MINT-Fächern wie Mathematik, Informatik, Naturwissenschaften und Technik, sowie in Wirtschaftswissenschaften und Gestaltung." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<meta name="robots" content="index,follow" />
+<meta name="author" content="Pressestelle der FH Aachen" />
+<meta name="keywords" content="FH, Fachhochschule, Aachen, University, Applied Sciences, NRW, Deutschland, Dreiländereck, Hochschule, Bildung, Bachelor, Master, Dual, Ausbildung" />
+<meta property="og:description" content="Wir bieten ein Studium in den MINT-Fächern wie Mathematik, Informatik, Naturwissenschaften und Technik, sowie in Wirtschaftswissenschaften und Gestaltung." />
+<meta property="og:title" content="FH Aachen" />
+<meta property="og:site_name" content="FH Aachen" />
+<meta name="twitter:card" content="summary" />
+<meta name="apple-mobile-web-app-capable" content="no" />
+<meta name="facebook-domain-verification" content="qf2ktr7qv6wra61di3gj57qol4fjhy" />
+
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/fhac_design_2012/Resources/Public/Css/bootstrap.min.css?1649071742" media="all">
+
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/news/Resources/Public/Css/news-basic.css?1664966669" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3temp/assets/css/e1ead0fe55.css?1664954468" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/fhac_design_2012/Resources/Public/Css/FhOLD.css?1665128534" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/fhac_people/Resources/Public/CSS/people.css?1647007546" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/fhac_layout/Resources/Public/Css/layout.css?1628149646" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/powermail/Resources/Public/Css/Basic.css?1664954704" media="all">
+<link rel="stylesheet" type="text/css" href="/typo3conf/ext/fhac_design_2012/Resources/Public/Css/powermail.css?1617192455" media="all">
+
+
+
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Dist/jquery-3.3.1.min.js?1562757320"></script>
+<script src="https://cse.google.com/cse.js?cx=010420090661851522299:dfpzfkz9vi0"></script>
+
+<script src="/typo3conf/ext/fhac_people/Resources/Public/JS/people.js?1637910775"></script>
+<script src="/typo3conf/ext/fhac_layout/Resources/Public/Js/layout.js?1628149646"></script>
+
+<script>
+/*<![CDATA[*/
+/*_scriptCode*/
+
+			/* decrypt helper function */
+		function decryptCharcode(n,start,end,offset) {
+			n = n + offset;
+			if (offset > 0 && n > end) {
+				n = start + (n - end - 1);
+			} else if (offset < 0 && n < start) {
+				n = end - (start - n - 1);
+			}
+			return String.fromCharCode(n);
+		}
+			/* decrypt string */
+		function decryptString(enc,offset) {
+			var dec = "";
+			var len = enc.length;
+			for(var i=0; i < len; i++) {
+				var n = enc.charCodeAt(i);
+				if (n >= 0x2B && n <= 0x3A) {
+					dec += decryptCharcode(n,0x2B,0x3A,offset);	/* 0-9 . , - + / : */
+				} else if (n >= 0x40 && n <= 0x5A) {
+					dec += decryptCharcode(n,0x40,0x5A,offset);	/* A-Z @ */
+				} else if (n >= 0x61 && n <= 0x7A) {
+					dec += decryptCharcode(n,0x61,0x7A,offset);	/* a-z */
+				} else {
+					dec += enc.charAt(i);
+				}
+			}
+			return dec;
+		}
+			/* decrypt spam-protected emails */
+		function linkTo_UnCryptMailto(s) {
+			location.href = decryptString(s,-2);
+		}
+		
+
+/*]]>*/
+</script>
+
+
+<link rel="canonical" href="https://www.fh-aachen.de/"/>
+
+<link rel="alternate" hreflang="de" href="https://www.fh-aachen.de/"/>
+<link rel="alternate" hreflang="en_US" href="https://www.fh-aachen.de/en/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.fh-aachen.de/"/>
+
+</head>
+<body>
+
+<!-- Webcode: 01111 -->
+<div id="hilfsnavi" class="invisible">
+    <a href="#hilfsnavi_topnavi">zur Top-Navigation (Kontakt, Presse, Hilfe, Downloads, Login)</a>,
+    <a href="#hilfsnavi_sprachwahl">zur Sprachumschaltung</a>,
+    <a href="#hilfsnavi_suche">zur Seitensuche</a>,
+    <a href="#hilfsnavi_headnavi">zur Haupt-Navigation</a>,
+    <a href="#hilfsnavi_navigation">zur Seiten-Navigation (inclusive Breadcrumb)</a>,
+    <a href="#hilfsnavi_inhalt">zum Seiteninhalt</a>,
+</div>
+<div id="PAGE">
+    <!--Layout Standard-->
+    <span id="hilfsnavi_headnavi" class="invisible"><a
+        href="#hilfsnavi_navigation">Haupt-Navigation &uuml;berspringen</a></span>
+    
+    <div id="HEADER">
+        <!-- Template FHAC-Classic -->
+        <div id="TOPNAV">
+            <a href="/kontakt" title="Kontaktinformationen der FH Aachen">Kontakt/Hilfe</a><a href="/hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen" title="Stellenanzeigen der FH Aachen">Stellenanzeigen</a><a href="/pressestelle" title="Presseinformationen der FH Aachen">Presse</a><a href="https://www.campus.fh-aachen.de/campus/all/search.asp?mode=addressrwth" target="_blank" title="Telefonbuch der FH Aachen">Telefonbuch</a><a href="/downloads" title="Formulare, Flyer, Broschüren, Informationen, ...">Downloads</a>
+        </div>
+        <div id="LOGIN" class="">
+            
+    
+            <a class="" id="dropdownLogin"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">Login</a>
+            <div class="dropdown-menu dropdown-menu-right" style="z-index: 10000;padding: 10px;"
+                 aria-labelledby="dropdownLogin">
+                
+    
+
+            <div id="c1" class="frame frame-default frame-type-login frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    
+    <div class="tx-felogin-pi1">
+		
+<script type="text/javascript">
+    if ("<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" > ""
+        && "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" != "<div>Enter your username and password here in order to log in on the website</div>".
+        && "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" != "<div></div>") {
+        text = "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>";
+        text = text.substring(5);
+        p = text.search(/<\/div>/);
+        text = text.substring(0, p);
+        alert(text);
+    }
+</script>
+<!-- ###LOGIN_FORM### -->
+<form action="/" name="LoginForm" target="_top" method="post" onsubmit="">
+    <h2 style="color:#000;padding:0px;">Einloggen</h2>
+    <div>
+        <!--label for="user">FH-Kennung</label-->
+        <input type="text" id="user" name="user" value="" size="46" autocomplete="off" placeholder="FH-Kennung"
+               title="FH-Kennung"/>
+    </div>
+    <div>
+        <!--label for="pass">Passwort</label-->
+        <input type="password" id="pass" name="pass" value="" size="46" placeholder="Passwort" title="Passwort"/>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Einloggen"/>
+        <!--span style="color:#f00;font-size:10px;">Das Login arbeitet in einigen Browsern nicht fehlerfrei.<br />Folgende Browser funktionieren:<ul><li>Internet Explorer ab Version 9</li><li>Firefox ab Version 14</li></ul>Eine Lösung ist in Arbeit</span-->
+    </div>
+    <div class="felogin-hidden">
+        <input type="hidden" name="logintype" value="login"/>
+        <input type="hidden" name="pid" value="2"/>
+        <input type="hidden" name="redirect_url" value=""/>
+        <!--input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" /-->
+        
+    </div>
+</form>
+<!-- ###LOGIN_FORM### -->
+
+	</div>
+	
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+            </div>
+        
+
+        </div>
+        <div id="sucheblock">
+            
+    <div class="gcse-searchbox"></div>
+    <div class="gcse-searchbox-only" data-resultsUrl="/suche/"></div>
+
+        </div>
+        <div id="SPRACHE">
+            
+            <span id="hilfsnavi_sprachwahl" class="invisible"><a
+                href="#hilfsnavi_suche">Sprachumschaltung überspringen</a></span>
+    
+        <a href="/en/">english</a>
+    
+
+        </div>
+        
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!--a class="navbar-brand" href="/">FH Aachen</a-->
+        <button id="button_NAV" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarHeadNavi"
+                aria-controls="navbarHeadNavi" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button id="button_SEARCH" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#sucheblock_mobil" aria-controls="sucheblock_mobil" aria-expanded="true"
+                aria-label="Toggle Suche">
+            <svg width="13" height="13" viewBox="0 0 13 13"><title>Suchen</title>
+                <path
+                    d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path>
+            </svg>
+        </button>
+        <!--button id="button_LOGIN" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#login_mobil" aria-controls="login_mobil" aria-expanded="true" aria-label="Toggle Login">
+            <img src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/login/schloss.svg" style="width:20px;height:20px;">
+        </button-->
+        <button class="navbar-toggler" id="login_mobil">
+            
+    
+            <a class="" id="dropdownLogin"
+               data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">Login</a>
+            <div class="dropdown-menu dropdown-menu-right" style="z-index: 10000;padding: 10px;"
+                 aria-labelledby="dropdownLogin">
+                
+    
+
+            <div id="c1" class="frame frame-default frame-type-login frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    
+    <div class="tx-felogin-pi1">
+		
+<script type="text/javascript">
+    if ("<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" > ""
+        && "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" != "<div>Enter your username and password here in order to log in on the website</div>".
+        && "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>" != "<div></div>") {
+        text = "<div>Bitte geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich an der Website anzumelden.</div>";
+        text = text.substring(5);
+        p = text.search(/<\/div>/);
+        text = text.substring(0, p);
+        alert(text);
+    }
+</script>
+<!-- ###LOGIN_FORM### -->
+<form action="/" name="LoginForm" target="_top" method="post" onsubmit="">
+    <h2 style="color:#000;padding:0px;">Einloggen</h2>
+    <div>
+        <!--label for="user">FH-Kennung</label-->
+        <input type="text" id="user" name="user" value="" size="46" autocomplete="off" placeholder="FH-Kennung"
+               title="FH-Kennung"/>
+    </div>
+    <div>
+        <!--label for="pass">Passwort</label-->
+        <input type="password" id="pass" name="pass" value="" size="46" placeholder="Passwort" title="Passwort"/>
+    </div>
+    <div>
+        <input type="submit" name="submit" value="Einloggen"/>
+        <!--span style="color:#f00;font-size:10px;">Das Login arbeitet in einigen Browsern nicht fehlerfrei.<br />Folgende Browser funktionieren:<ul><li>Internet Explorer ab Version 9</li><li>Firefox ab Version 14</li></ul>Eine Lösung ist in Arbeit</span-->
+    </div>
+    <div class="felogin-hidden">
+        <input type="hidden" name="logintype" value="login"/>
+        <input type="hidden" name="pid" value="2"/>
+        <input type="hidden" name="redirect_url" value=""/>
+        <!--input type="hidden" name="tx_felogin_pi1[noredirect]" value="0" /-->
+        
+    </div>
+</form>
+<!-- ###LOGIN_FORM### -->
+
+	</div>
+	
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+            </div>
+        
+
+        </button>
+        <div id="spracheblock_mobil" class="button">
+            
+            <span id="hilfsnavi_sprachwahl" class="invisible"><a
+                href="#hilfsnavi_suche">Sprachumschaltung überspringen</a></span>
+    
+        <a href="/en/">english</a>
+    
+
+        </div>
+        <div class="collapse" id="sucheblock_mobil">
+            
+    <div class="gcse-searchbox"></div>
+    <div class="gcse-searchbox-only" data-resultsUrl="/suche/"></div>
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbarHeadNavi">
+            <ul class="navbar-nav mr-auto">
+                <li id="ddm_start" class="nav-item mobil">
+                    <a class="nav-link" href="/">Startseite</a>
+                </li>
+                
+                    <li id="ddm_3"
+                        class="nav-item dropdown "
+                        style="border: 0;box-shadow: none;display: flex;">
+                        <a class="nav-link" href="/studium"
+                           onmouseover="if(!$('#ddm_3').hasClass('show')) {$('#ddb_3').click();}">Studium
+                            <span class="sr-only">(current)</span></a>&nbsp;
+                        <a id="ddb_3" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="ddb_3">
+                            
+                                    
+    <div class="dropdown" id="dropdown_page_10">
+        
+    
+
+            <div id="c5977" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/studium" title="Opens internal link in current window" class="internal-link">Studienangebot</a></li> 	<li><a href="/studium/dual/duale-studiengaenge" title="Opens internal link in current window" class="internal-link">Duale Studiengänge</a></li> 	<li><a href="/studium/systemakkreditierung" title="Opens internal link in current window" class="internal-link">Systemakkreditierung</a></li> 	<li><a href="/studium/systemakkreditierung/leitbild-studium-und-lehre" title="Opens internal link in current window" class="internal-link">Leitbild Studium und Lehre</a></li> 	<li><a href="/studium/systemakkreditierung/video-zur-studiengangsevaluation" title="Opens internal link in current window" class="internal-link">Video zur Studiengangsevaluation</a></li> 	<li><a href="/hochschule/projekt-sqsl" title="Opens internal link in current window" class="internal-link">Systematische und nachhaltige Qualitätsentwicklung (SQSL)</a></li> 	<li><a href="/hochschule/doll" title="Opens internal link in current window" class="internal-link">Digitalisierungsoffensive Lehren und Lernen</a></li> 	<li><a href="/hochschule/zentrum-fuer-hochschuldidaktik-und-qualitaetsentwicklung-zhq" title="Opens internal link in current window" class="internal-link">Zentrum für Hochschuldidaktik u. Qualitätsentwicklung</a></li> 	<li><a href="/hochschule/allgemeine-studienberatung" title="Opens internal link in current window" class="internal-link">Allgemeine Studienberatung</a></li> 	<li><a href="/hochschule/ssc" title="Opens internal link in current window" class="internal-link">Student Service Center (SSC)</a></li> 	<li><a href="/studium/studentische-projekte" title="Opens internal link in current window" class="internal-link">Studentische Projekte</a></li> 	<li><a href="/studium/schuelerlabore" title="Opens internal link in current window" class="internal-link">Schüler-Labore</a></li> 	<li><a href="/hochschule/sprachenzentrum" title="Opens internal link in current window" class="internal-link">Sprachenzentrum</a></li> 	<li><a href="/hochschule/aos" title="Opens internal link in current window" class="internal-link">Internationally Oriented Studies (IOS)</a></li> 	<li><a href="/hochschule/freshman" title="Opens internal link in current window" class="internal-link">Freshman Institute</a></li> 	<li><a href="/studium/tag-der-lehre-lehrimpulse" title="Opens internal link in current window" class="internal-link">Tag der Lehre</a></li> 	<li><a href="/studium/lehrpreis-der-fh-aachen">Lehrpreis der FH Aachen</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                                
+                        </div>
+                    </li>
+                
+                    <li id="ddm_4"
+                        class="nav-item dropdown "
+                        style="border: 0;box-shadow: none;display: flex;">
+                        <a class="nav-link" href="/fachbereiche"
+                           onmouseover="if(!$('#ddm_4').hasClass('show')) {$('#ddb_4').click();}">Fachbereiche
+                            <span class="sr-only">(current)</span></a>&nbsp;
+                        <a id="ddb_4" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="ddb_4">
+                            
+                                    
+    <div class="dropdown" id="dropdown_page_11">
+        
+    
+
+            <div id="c5908" class="frame frame-default frame-type-menu_subpages frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        <ul>
+            
+                <li>
+                    <a href="/fachbereiche/architektur" title="Architektur">
+                        <span>Architektur</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/bauingenieurwesen" title="Bauingenieurwesen">
+                        <span>Bauingenieurwesen</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/chemieundbiotechnologie" title="Chemie und Biotechnologie">
+                        <span>Chemie und Biotechnologie</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/gestaltung" title="Gestaltung">
+                        <span>Gestaltung</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/elektrotechnik-und-informationstechnik" title="Elektrotechnik und Informationstechnik">
+                        <span>Elektrotechnik und Informationstechnik</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/luft-und-raumfahrttechnik" title="Luft- und Raumfahrttechnik">
+                        <span>Luft- und Raumfahrttechnik</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/wirtschaft" title="Wirtschaftswissenschaften">
+                        <span>Wirtschaftswissenschaften</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/maschinenbau-und-mechatronik" title="Maschinenbau und Mechatronik">
+                        <span>Maschinenbau und Mechatronik</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/medizintechnik-und-technomathematik" title="Medizintechnik und Technomathematik">
+                        <span>Medizintechnik und Technomathematik</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/fachbereiche/energietechnik" title="Energietechnik">
+                        <span>Energietechnik</span>
+                    </a>
+                </li>
+            
+        </ul>
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                                
+                        </div>
+                    </li>
+                
+                    <li id="ddm_5"
+                        class="nav-item dropdown "
+                        style="border: 0;box-shadow: none;display: flex;">
+                        <a class="nav-link" href="/hochschule"
+                           onmouseover="if(!$('#ddm_5').hasClass('show')) {$('#ddb_5').click();}">Die Hochschule
+                            <span class="sr-only">(current)</span></a>&nbsp;
+                        <a id="ddb_5" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="ddb_5">
+                            
+                                    
+    <div class="dropdown" id="dropdown_page_12" style="margin-left:-419px;">
+        <div style="float:left;width:196px;margin-right: 9px;">
+            
+    
+
+            <div id="c5973" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Beratung &amp; Service
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/zielgruppen/fuer-schuelerinnen-und-schueler" title="Opens internal link in current window" class="internal-link">für Schülerinnen und Schüler</a></li> 	<li><a href="/hochschule/ssc" title="Opens internal link in current window" class="internal-link">Student Service Center (SSC)</a></li> 	<li><a href="/zielgruppen/fuer-studierende" title="Opens internal link in current window" class="internal-link">für Studierende</a></li> 	<li><a href="/vbecks" title="Opens internal link in current window" class="internal-link">für Studierende mit Behinderung oder chronischer Erkrankung</a></li> 	<li><a href="/zielgruppen/fuer-beschaeftigte" title="Opens internal link in current window" class="internal-link">für Beschäftigte</a></li> 	<li><a href="/hochschule/akademisches-auslandsamt" title="Opens internal link in current window" class="internal-link">Internationales</a></li> 	<li><a href="/hochschule/inklusion">Inklusion</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        </div>
+        <div style="float:left;width:196px;margin-right: 9px;">
+            
+    
+
+            <div id="c5974" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Einrichtungen
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/hochschule/bibliothek" title="Opens internal link in current window" class="internal-link">Bibliothek</a></li> 	<li><a href="/hochschule/allgemeine-studienberatung" title="Opens internal link in current window" class="internal-link">Allgemeine Studienberatung</a></li> 	<li><a href="/hochschule/psychosoziale-beratung" title="Opens internal link in current window" class="internal-link">Psychosoziale Beratung</a></li> 	<li><a href="/hochschule/studierendensekretariat" title="Opens internal link in current window" class="internal-link">Studierendensekretariat</a></li> 	<li><a href="/hochschule/akademisches-auslandsamt" title="Opens internal link in current window" class="internal-link">Akademisches Auslandsamt</a></li> 	<li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer" title="Opens internal link in current window" class="internal-link">Innovationstransfer</a></li> 	<li><a href="/hochschule/datenverarbeitungszentrale" title="Opens internal link in current window" class="internal-link">Datenverarbeitungszentrale</a></li> 	<li><a href="/hochschule/betriebliches-gesundheitsmanagement" title="Opens internal link in current window" class="internal-link">Betriebliches Gesundheitsmanagement</a></li> 	<li><a href="/hochschule/gleichstellung" title="Opens internal link in current window" class="internal-link">Gleichstellung an der FH Aachen</a></li> 	<li><a href="/hochschule/familienbuero" title="Opens internal link in current window" class="internal-link">Familienbüro</a></li> 	<li><a href="/hochschule/zentrum-fuer-hochschuldidaktik-und-qualitaetsentwicklung-zhq" title="Opens internal link in current window" class="internal-link">Zentrum für Hochschuldidaktik und Qualitätsentwicklung</a></li> 	<li><a href="/hochschule/elearning" title="Opens internal link in current window" class="internal-link">eLearning</a></li> 	<li><a href="/hochschule/zentralverwaltung/dezernat-iv-facility-management/arbeits-umweltschutz" title="Opens internal link in current window" class="internal-link">Arbeitssicherheit und Umweltschutz</a></li> 	<li>Energie Management</li> 	<li><a href="/hochschule/career-service" title="Opens internal link in current window" class="internal-link">Career Service</a></li> 	<li><a href="/hochschule/freshman" title="Opens internal link in current window" class="internal-link">Freshman Institute</a></li> 	<li><a href="/hochschule/sprachenzentrum" title="Opens internal link in current window" class="internal-link">Sprachenzentrum</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        </div>
+        <div style="float:left;width:196px;margin-right: 9px;">
+            
+    
+
+            <div id="c5975" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                FH Aachen
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/topnavi/presse/kurzprofil-der-hochschule" title="Opens internal link in current window" class="internal-link">Hochschulprofil</a></li> 	<li><a href="https://www.fh-aachen.de/downloads/organisation?did=1601&amp;download=OrgaStruktur_FH_20220501.pdf&amp;no_cache=1&amp;cHash=4d8110954f31400c9d97ae1ec39c1704" title="Initiates file download" target="_blank">Organisationsstruktur der FH Aachen</a></li> 	<li><a href="/hochschule/campus-juelich" title="Opens internal link in current window" class="internal-link">Campus Jülich</a></li> 	<li><a href="/hochschule/diversity-und-chancengerechtigkeit">Diversity und Chancengerechtigkeit</a></li> 	<li><a href="/hochschule/nachhaltigkeit">Nachhaltigkeit</a></li> 	<li><a href="http://opus4.bibliothek.fh-aachen.de/opus4/home" title="Opens external link in new window" target="_blank" rel="noreferrer">Publikationen</a></li> 	<li><a href="/hochschule/fundraising" title="Opens internal link in current window" class="internal-link">Alumnimanagement&nbsp;und Fundraising</a></li> 	<li><a href="/hochschule/projekt-sqsl" title="Opens internal link in current window" class="internal-link">Projekt SQSL</a></li> 	<li><a href="/hochschule/bibliothek/publikationen" title="Opens external link in new window" target="_blank">Veröffentlichungen der Professorinnen und Professoren et al.</a></li> 	<li><a href="/hochschule/zentralverwaltung/dezernat-i-personal/stellenanzeigen/stellenanzeigen-der-fh-aachen" title="Opens internal link in current window" class="internal-link">Stellenanzeigen</a></li> 	<li><a href="/hochschule/big-band" title="Opens internal link in current window" class="internal-link">FH Big Band "Full House"</a></li> 	<li><a href="/hochschule/fh-hochschulchor" title="Opens internal link in current window" class="internal-link">FH Hochschulchor</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        </div>
+        <div style="float:left;width:196px;margin-right: -9px;">
+            
+    
+
+            <div id="c5976" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Administration
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/hochschule/hochschulrat" title="Opens internal link in current window" class="internal-link">Hochschulrat</a></li> 	<li><a href="/hochschule/rektorat" title="Opens internal link in current window" class="internal-link">Rektorat</a></li> 	<li><a href="/hochschule/senat" title="Opens internal link in current window" class="internal-link">Senat</a></li> 	<li><a href="/hochschule/hochschulwahlversammlung" title="Opens internal link in current window" class="internal-link">Hochschulwahlversammlung</a></li> 	<li><a href="/hochschule/kommissionen-und-ausschuesse" title="Opens internal link in current window" class="internal-link">Kommissionen und Ausschüsse</a></li> 	<li><a href="/hochschule/hochschulwahlen">Hochschulwahlen</a></li> 	<li><a href="/hochschule/zentralverwaltung" title="Opens internal link in current window" class="internal-link">Zentralverwaltung</a></li> 	<li><a href="https://bic.fh-aachen.de" title="Opens internal link in current window" target="_blank" class="external-link-new-window" rel="noreferrer">BIC Cloud Prozessportal</a>&nbsp;(intern)</li> 	<li><a href="/hochschule/it-sicherheit" title="Opens internal link in current window" class="internal-link">Informationssicherheit</a></li> 	<li><a href="/datenschutz" title="Opens internal link in current window" class="internal-link">Datenschutz</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        </div>
+    </div>
+
+                                
+                        </div>
+                    </li>
+                
+                    <li id="ddm_6"
+                        class="nav-item dropdown "
+                        style="border: 0;box-shadow: none;display: flex;">
+                        <a class="nav-link" href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer"
+                           onmouseover="if(!$('#ddm_6').hasClass('show')) {$('#ddb_6').click();}">Forschung
+                            <span class="sr-only">(current)</span></a>&nbsp;
+                        <a id="ddb_6" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <div class="dropdown-menu" aria-labelledby="ddb_6">
+                            
+                                    
+    <div class="dropdown" id="dropdown_page_13">
+        
+    
+
+            <div id="c5978" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    <ul> 	<li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer" title="Opens internal link in current window" class="internal-link">Innovationstransfer</a></li> 	<li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/institute-und-forschungseinrichtungen" title="Opens internal link in current window" class="internal-link">Institute</a></li> 	<li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/promovieren-an-der-fh">Promovieren an der FH Aachen</a></li> </ul>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                                
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+        <div id="SEITENNAV_mobil">
+            <div id="button_SeitenNAV" class="navbar-toggler" type="button" data-toggle="collapse"
+                 data-target="#SEITENNAV_mobil_tree"
+                 aria-controls="SEITENNAV_mobil_tree" aria-expanded="false" aria-label="Toggle navigation">
+                <!--FH Aachen-->
+                
+    
+        <ul class="menu-breadcrumb breadcrumbs" style="display: inline-flex;">
+            
+                
+
+
+        <li class=" siteroot aktiv current">
+            
+                    <span title="Sie befinden sich auf dieser Seite">FH Aachen</span>
+                
+        </li>
+    
+
+
+                
+                        <img src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/arrowDown.svg"
+                             style="height:24px;width:24px;">
+                    
+            
+        </ul>
+    
+
+            </div>
+            <div id="SEITENNAV_mobil_tree" class="collapse">
+                
+                <ul>
+                    
+                            
+    <ul><li><a href="/zielgruppen/fuer-schuelerinnen-und-schueler" title="für Schülerinnen und Schüler">für Schülerinnen und Schüler</a></li><li><a href="/zielgruppen/fuer-studierende" title="für Studierende">für Studierende</a></li><li><a href="/vbecks" title="für Studierende mit Behinderung oder chronischer Erkrankung">für Studierende mit Behinderung oder chronischer Erkrankung</a></li><li><a href="/hochschule/fundraising" title="für Alumni, für Förderinnen und Förderer">für Alumni, für Förderinnen und Förderer</a></li><li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/informationen-fuer-unternehmen" title="für Unternehmerinnen und Unternehmer">für Unternehmerinnen und Unternehmer</a></li><li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/gruendungszentrum-fh-aachen" title="Gründungszentrum">Gründungszentrum</a></li><li><a href="/hochschule/ssc" title="Student Service Center (SSC)">Student Service Center (SSC)</a></li><li><a href="/zielgruppen/fh-aachen-akademie" title="FH Aachen Akademie">FH Aachen Akademie</a></li><li><a href="/zielgruppen/fuer-beschaeftigte" title="für Beschäftigte">für Beschäftigte</a></li><li><a href="/hochschule/akademisches-auslandsamt" title="Internationales">Internationales</a></li><li><a href="http://www.fhshop-aachen.de/" title="FHShop Aachen">FHShop Aachen</a></li></ul>
+    <hr>
+
+                        
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--f:render section="Debug"/-->
+    <div id="SEITE">
+        <a id="logo" href="/" title="zur Startseite"></a>
+        <div id="MAIN">
+            <div id="MAINNAV">
+                <span id="hilfsnavi_navigation" class="invisible"><a href="#hilfsnavi_inhalt">Seiten-Navigation &uuml;berspringen</a></span>
+                <div id="BREADCRUMB_MAIN">
+                    
+                            <ul class="menu-breadcrumb breadcrumbs">
+                                <li class=" active current">Direkteinstieg</li>
+                            </ul>
+                        
+                </div>
+                <ul id="SEITENNAV">
+                    
+                            
+    <ul><li><a href="/zielgruppen/fuer-schuelerinnen-und-schueler" title="für Schülerinnen und Schüler">für Schülerinnen und Schüler</a></li><li><a href="/zielgruppen/fuer-studierende" title="für Studierende">für Studierende</a></li><li><a href="/vbecks" title="für Studierende mit Behinderung oder chronischer Erkrankung">für Studierende mit Behinderung oder chronischer Erkrankung</a></li><li><a href="/hochschule/fundraising" title="für Alumni, für Förderinnen und Förderer">für Alumni, für Förderinnen und Förderer</a></li><li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/informationen-fuer-unternehmen" title="für Unternehmerinnen und Unternehmer">für Unternehmerinnen und Unternehmer</a></li><li><a href="/hochschule/zentralverwaltung/dezernat-v-innovationstransfer/gruendungszentrum-fh-aachen" title="Gründungszentrum">Gründungszentrum</a></li><li><a href="/hochschule/ssc" title="Student Service Center (SSC)">Student Service Center (SSC)</a></li><li><a href="/zielgruppen/fh-aachen-akademie" title="FH Aachen Akademie">FH Aachen Akademie</a></li><li><a href="/zielgruppen/fuer-beschaeftigte" title="für Beschäftigte">für Beschäftigte</a></li><li><a href="/hochschule/akademisches-auslandsamt" title="Internationales">Internationales</a></li><li><a href="http://www.fhshop-aachen.de/" title="FHShop Aachen">FHShop Aachen</a></li></ul>
+    <hr>
+
+                        
+                </ul>
+                
+                
+    
+    
+            <div class="container">
+                
+    
+
+            <div id="c3480" class="frame frame-default frame-type-fhacwebcode_eingabe frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Webcode
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+    
+<div class="tx-fhac-webcode" v="">
+    
+    <hr>
+    <form action="/?tx_fhacwebcode_eingabe%5Baction%5D=input&amp;tx_fhacwebcode_eingabe%5Bcontroller%5D=Eingabe&amp;cHash=2179f77a74010fb87e9a29e22a72b518" method="post">
+<div>
+<input type="hidden" name="tx_fhacwebcode_eingabe[__referrer][@extension]" value="FhacWebcode" />
+<input type="hidden" name="tx_fhacwebcode_eingabe[__referrer][@controller]" value="Eingabe" />
+<input type="hidden" name="tx_fhacwebcode_eingabe[__referrer][@action]" value="input" />
+<input type="hidden" name="tx_fhacwebcode_eingabe[__referrer][arguments]" value="YTowOnt9e7d67feb3c42b486fb3b1878914b6738e9ba1bd9" />
+<input type="hidden" name="tx_fhacwebcode_eingabe[__referrer][@request]" value="{&quot;@extension&quot;:&quot;FhacWebcode&quot;,&quot;@controller&quot;:&quot;Eingabe&quot;,&quot;@action&quot;:&quot;input&quot;}9a0627bdd60bcc39677a0eb3b7dd8a856ffd9d15" />
+<input type="hidden" name="tx_fhacwebcode_eingabe[__trustedProperties]" value="{&quot;webcode&quot;:1}2aa981c3aa74a22f513a423323ef804898aa7bda" />
+</div>
+
+        <input style="width: 120px;" type="text" name="tx_fhacwebcode_eingabe[webcode]" required="required" />
+        <input type="submit" value="GO" />
+    </form>
+    
+    
+    <hr>
+
+</div>
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c26861" class="frame frame-default frame-type-image frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    <div class="ce-image ce-left ce-above">
+        
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            <a href="https://www.fh-aachen.de/hochschule/weltoffene-hochschule" title="Weltoffene Hochschulen gegen Fremdenfeindlichkeit">
+                
+<img class="image-embed-item" title="Weltoffene Hochschulen gegen Fremdenfeindlichkeit" alt="Weltoffene Hochschulen gegen Fremdenfeindlichkeit" src="/fileadmin/user_upload/Logo_RGB.jpg" width="174" height="94" />
+
+
+            </a>
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+            </div>
+        
+
+            </div>
+            
+
+    
+    
+    
+            <div id="INHALT_MAIN">
+                    <span id="hilfsnavi_inhalt" class="invisible"><a
+                        href="#hilfsnavi">Inhalt &uuml;berspringen</a></span>
+                <div class="container">
+                    <div class="container">
+                        <!--TYPO3SEARCH_begin-->
+                        
+    
+
+            <div id="c47" class="frame frame-default frame-type-html frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <h1>FH Aachen<br>University of Applied Sciences</h1>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c193855" class="frame frame-default frame-type-gridelements_pi1 frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+        <!--Carousel wrapper-->
+        <div id="carousel_193855" class="carousel slide" data-ride="carousel" data-interval="4000"
+             data-pause="hover" data-keyboard="true">
+            <script>var prevX = -1;</script>
+            <div class="carousel-inner">
+                
+                    <div class="carousel-item active">
+                        
+
+
+        
+            
+    
+
+            <div id="c210015" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Prof. Casse-Schlüter im Dom" src="/fileadmin/org/org_poem/medien_slider/Slider_poem_casse_nachruf.jpg" width="642" height="210" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>Die FH Aachen trauert um Prof. Doris Casse-Schlüter</h2>
+<p>Prof. Doris Casse-Schlüter ist am 1. Oktober 2022 im Alter von 80 Jahren gestorben. Wir trauern um einen wunderbaren Menschen. Unser tiefempfundenes Mitgefühl gilt ihren Angehörigen und Freunden. | <a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21831&amp;cHash=826fb98b26f25904519142339aa5e35c" target="_blank">Zum Nachruf</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c212821" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" src="/fileadmin/_processed_/3/1/csm_FP_Slider_7074beeb46.jpg" width="642" height="187" alt="" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>FH Aachen vergibt Forschungspreis 2022</h2>
+<p>Prof. Dr. Isabel Kuperjans und ihr Forschungsteam vom <a href="/forschung/institut-nowum-energy">Institut NOWUM-Energy</a> werden mit dem Forschungspreis 2022 ausgezeichnet. Die Arbeit zur Minimierung des Energieeinsatzes und der CO<sub>2</sub>-Emissionen in der Papierindustrie wird mit einem Preis von 10.000 € dotiert. Erstmalig vergab das Rektorat auch eine Ehrung für das wissenschaftliche Gesamtwerk. | <a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21791&amp;cHash=bc8feb01cadb734acb0bfdfa74eea81a" target="_blank">Mehr Informationen zur Forschungspreisverleihung und den Auszeichnungen</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c210959" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Pro8 bei der Preisverleihung in Berlin" src="/fileadmin/org/org_poem/slider/2022_09_14_Slider_pro8.png" width="642" height="187" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>pro8 gewinnt Deutschen Arbeitgeberpreis</h2>
+<p>Das Projekt pro8 des Fachbereichs Maschinenbau und Mechatronik der FH Aachen ist in Berlin mit dem Deutschen Arbeitgeberpreis für Bildung in der Kategorie „Hochschulische Bildung“ ausgezeichnet worden. Mit dem Preis würdigt die Bundesvereinigung der Deutschen Arbeitgeberverbände (BDA) seit über 20 Jahren herausragende Leistungen in der Bildungsarbeit. <a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21756&amp;cHash=3466243d9bc189d672d25645ec37d019" target="_blank">Zum vollständigen Artikel über die Preisverleihung und pro8</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c208064" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" title="Lehrpreisträger 2022 mit Vertreter:innen des Hochschulrats" alt="Die vier Lehrpreisträger sind gemeinsam mit Vertreter:innen des Hochschulrats abgebildet." src="/fileadmin/org/org_poem/medien_slider/Slider_Lehrpreise_2022.jpg" width="642" height="210" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>Unsere Lehrpreisträger 2022</h2>
+<p>Im Rahmen des siebten Tags der Lehre der FH Aachen wurden Lehrende für besonderes Engagement und innovative Konzepte im Bereich Studium und Lehre mit dem Lehrpreis ausgezeichnet. Es ist die höchste Auszeichnung der FH im Bereich der Lehre. | <a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21744&amp;cHash=15d0e9e54a4e9496668f778427fe1f78" target="_blank">Mehr Informationen zu den Lehrpreisträgern und der Veranstaltung</a></p>
+<p>&nbsp;</p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c193856" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" title="Welcome Erstis" alt="Welcome Erstis - Schriftzug mit Luftballons" src="/fileadmin/_processed_/1/e/csm_Slider_Welcome_Erstis_POEM_fb9583d4ba.png" width="642" height="186" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>Willkommen, liebe Erstsemester-Studierende!</h2>
+<p>Das Wintersemester ist offiziell gestartet - wir wünschen allen Erstsemester-Studierenden der FH Aachen einen guten Start ins Studium. <a href="/zielgruppen/fuer-studierende/willkommen">Wichtige Informationen zum Studienstart haben wir auf diesen Seiten gesammelt. </a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c208002" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" title="Illustration: Everywhere you go, Lara Bispinck" src="/fileadmin/_processed_/d/a/csm_Slider_Nachhaltigkeit_98089f15c7.png" width="642" height="195" alt="" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>WIR werden nachhaltig!</h2>
+<p>Die FH Aachen macht sich auf den Weg zu einer nachhaltigen Hochschule! Das gilt für die Kernbereiche Lehre und Forschung, aber auch für den Betrieb der Verwaltung, der Fachbereiche, der Institute und der Einrichtungen. Der Weg zu einer nachhaltigen, verantwortungsbewussten Hochschule lässt sich nur gemeinsam beschreiten: Alle FH-Angehörigen — Studierende, Lehrende, Mitarbeitende — sind herzlich eingeladen, sich mit Engagement und Ideen an diesem Prozess zu beteiligen. | <a href="/hochschule/nachhaltigkeit">Alle Informationen gibt es auf den Seiten der Nachhaltigkeit.</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+                    <div class="carousel-item ">
+                        
+
+
+        
+            
+    
+
+            <div id="c194446" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" title="Solidarität mit der Ukraine" alt="Friedenstaube mit Schriftzug &quot;Solidarität mit der Ukraine&quot;" src="/fileadmin/_processed_/3/7/csm_Slider_Solidaritaet_Ukraine_20220401_812fd3f681.jpg" width="642" height="186" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>Hilfsangebote für ukrainische und russische<br> Studierende</h2>
+<p>Die FH Aachen verurteilt den Einmarsch der russischen Truppen und solidarisiert sich mit den Menschen in der Ukraine. Der Krieg hat vielfältige Folgen auch für das akademische Leben. Wir haben Informationen und Hilfsangebote für ukrainische und russische Studierende zusammengestellt. | <a href="/hochschule/akademisches-auslandsamt/hilfsangebote">Zu den Informationen und Hilfsangeboten</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                    </div>
+                
+            </div>
+            <span class="carousel-control-prev" href="#carousel_193855" data-slide="prev">
+                <i class="fa fa-chevron-left fa-2x carousel-control-prev-icon"></i>
+            </span>
+            <span class="carousel-control-next" href="#carousel_193855" data-slide="next">
+                <i class="fa fa-chevron-right fa-2x carousel-control-next-icon"></i>
+            </span>
+            <ul class="carousel-indicators">
+                
+                    <li data-target="#carousel_193855" data-slide-to="0"
+                        class="active"
+                        title="FH trauert um Prof. Doris Casse-Schlüter"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="1"
+                        class=""
+                        title="Unsere Forschungspreisträgerin 2022"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="2"
+                        class=""
+                        title="Teamplay für die Zukunft - pro8 gewinnt Deutschen Arbeitgeberpreis"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="3"
+                        class=""
+                        title="Unsere Lehrpreisträger 2022"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="4"
+                        class=""
+                        title="Welcome zum Wintersemester 22/23"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="5"
+                        class=""
+                        title="WIR werden nachhaltig!"></li>
+                
+                    <li data-target="#carousel_193855" data-slide-to="6"
+                        class=""
+                        title="Ukrainekrieg - Hilfsangebote und Informationen für Studierende"></li>
+                
+            </ul>
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c166080" class="frame frame-custom-20 frame-type-textpic frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Aktuelle Informationen zum Coronavirus
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+    <div class="ce-gallery ce-border"
+         data-ce-columns="1" data-ce-images="1">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" src="/fileadmin/_processed_/d/5/csm_corona-100x100-wei%C3%9F_383070437f.png" width="180" height="180" alt="" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+</div>
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=18732&amp;cHash=10c7fab6b560d20474f702a76578602f" target="_blank">Aktuelle Informationen zum Coronavirus</a></p>
+<p><a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=18727&amp;cHash=9e27e78385fd37eaf2ea9a08f72b494d" title="Opens internal link in current window" target="_blank">Updated Information on the Coronavirus (English)</a></p>
+<p><a href="https://www.fh-aachen.de/hochschule/zentralverwaltung/dezernat-i-personal/info-corona/" title="Opens internal link in current window" target="_blank" class="external-link-new-window">Informationen speziell für Beschäftigte</a></p>
+<p><a href="https://www.fh-aachen.de/pressestelle/presseaktuelles/faq-corona" target="_blank">FAQ für Studierende</a></p>
+<p><a href="/pressestelle/presseaktuelles/faq-impfung">FAQ zu Impfungen in der Hochschulärztlichen Einrichtung</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c177770" class="frame frame-default frame-type-gridelements_pi1 frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                
+                    
+
+
+        
+            
+    
+
+            <div id="c178792" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c14" class="frame frame-default frame-type-list frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Aktuelles
+            </h2>
+            
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+        
+
+
+	
+
+
+<div class="news">
+	
+	<!--TYPO3SEARCH_end-->
+	
+			<div class="news-list-view" id="news-container-14">
+				
+                        
+                            
+
+                        
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Emissionsarme Stromerzeugung made in Aachen</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-14">
+    14.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>FH-Projekt erhält den Innovationspreis der deutschen Gaswirtschaft</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Emissionsarme Stromerzeugung made in Aachen" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22073&amp;cHash=3cb6e0546854ac14a6ddb8217b3ce8cf">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Hervorragende Abschlussarbeiten gewürdigt</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-14">
+    14.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Fachbereichstag Informatik 2022 an der FH Aachen </p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Hervorragende Abschlussarbeiten gewürdigt" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22071&amp;cHash=3226d90ba8e70e1f0b78a48b62112de7">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Starke Teamleistung</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-13">
+    13.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Aixtreme-Racing-Team beendet Rennsaison 2022</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Starke Teamleistung" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22066&amp;cHash=e9d4fcb7e941d0641e4c6de8c0cf93e5">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Campus Jülich radelt auf den vierten Platz</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-12">
+    12.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Erfolgreiche Teilnahme beim STADTRADELN Jülich</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Campus Jülich radelt auf den vierten Platz" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22063&amp;cHash=2b87a9d5b368c69312adf7a79d5f27da">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Wettbewerb für Gründungsinteressierte</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-07">
+    07.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Auftakt am 25. Oktober in Düren</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Wettbewerb für Gründungsinteressierte" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22053&amp;cHash=5427f04ddaafbb418206cb6d1f1c7eb5">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Gemeinsam für Chancengerechtigkeit</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-07">
+    07.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>FH Aachen tritt Netzwerk bei</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Gemeinsam für Chancengerechtigkeit" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22052&amp;cHash=c2dde9b728ad88dd307bec192d831ce2">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Technischer Innovationskreis Schienengüterverkehr tagt an der FH</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-06">
+    06.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Fachleute treffen sich im Kompetenzzentrum Mobilität</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Technischer Innovationskreis Schienengüterverkehr tagt an der FH" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21833&amp;cHash=8e1ee04f195f25799a4e4278341baba1">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                        
+                            
+
+                        
+					
+			</div>
+		
+	<!--TYPO3SEARCH_begin-->
+
+</div>
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                
+                    
+
+
+        
+            
+    
+
+            <div id="c31803" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+
+
+
+                
+                
+
+    <p>&nbsp;</p>
+<p><a href="/pressestelle/presseaktuelles/archiv" title="Opens internal link in current window" class="internal-link">Zum Archiv -&gt;</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                
+            </div>
+            <div class="col-md-6 col-xs-12">
+                
+                    
+
+
+        
+            
+    
+
+            <div id="c178799" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c178795" class="frame frame-default frame-type-list frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            
+                
+
+    
+            <h2 class="">
+                Veranstaltungen
+            </h2>
+            
+        
+
+
+
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+        
+
+
+	
+
+
+<div class="news">
+	
+	<!--TYPO3SEARCH_end-->
+	
+			<div class="news-list-view" id="news-container-178795">
+				
+                        
+                            
+
+                        
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Informationsveranstaltung zum Master of Education</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-19">
+    19.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Ingenieur/-in sein – Lehrer/-in werden</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Informationsveranstaltung zum Master of Education" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21723&amp;cHash=e6c028368998342815a06a6a1796b307">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">FH und WFG laden zum Unternehmensfrühstück</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-20">
+    20.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Thema: Rezepte gegen den Fachkräftemangel</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="FH und WFG laden zum Unternehmensfrühstück" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21767&amp;cHash=14a1ff639d8af5f8bf8738c9a5e994f9">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Wenn&#039;s passt, dann passt&#039;s!</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-20">
+    20.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Finde Unternehmen aus der Region, die so ticken wie du</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Wenn's passt, dann passt's!" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=20801&amp;cHash=92aa0f43a477d5f21d7cf279705d316d">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Deutsche Hochschulmeisterschaften im Reiten</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-21">
+    21.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Angebot des Hochschulsportzentrums</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Deutsche Hochschulmeisterschaften im Reiten" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22072&amp;cHash=df8402f1cfe426f4e4aaecebb9b3c612">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Absolventinnen und Absolventen werden verabschiedet</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-21">
+    21.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Veranstaltung der Fachbereiche Chemie und Biotechnologie sowie Energietechnik</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Absolventinnen und Absolventen werden verabschiedet" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=22074&amp;cHash=ca8bca625408fd5820b825323b19ed4e">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Berufseinstieg gekonnt meistern</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-24">
+    24.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Ein kostenloses Seminar des Career Service</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Berufseinstieg gekonnt meistern" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21726&amp;cHash=57b78e6dab1177e3914409bf285643b6">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                            
+<!--
+	=====================
+		Partials/List/Item.html
+-->
+<div class="article articletype-0"
+     itemscope="itemscope" itemtype="http://schema.org/Article">
+    <h3 style="display:inline">Workshop Kommunikationstraining Sprechen &amp; Präsentieren</h3>&nbsp;|&nbsp;<time style="display:inline" itemprop="datePublished"
+                                                                       datetime="2022-10-25">
+    25.10.2022
+</time>&nbsp;|&nbsp;
+    
+            <div itemprop="description" style="display:inline"><p>Veranstaltung des Career Service</p>
+            </div>
+        
+
+    &nbsp;|&nbsp;<a class="more" title="Workshop Kommunikationstraining Sprechen &amp; Präsentieren" href="/pressestelle/presseaktuelles/aktuelles-details?tx_news_pi1%5Baction%5D=detail&amp;tx_news_pi1%5Bcontroller%5D=News&amp;tx_news_pi1%5Bnews%5D=21716&amp;cHash=a7948195cd2d08755db94ee011aee56f">
+    weiterlesen
+</a>
+</div>
+
+
+                        
+                        
+                            
+
+                        
+					
+			</div>
+		
+	<!--TYPO3SEARCH_begin-->
+
+</div>
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+        
+    
+
+
+                
+            </div>
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c16644" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+                
+
+    <p><a href="/pressestelle/presseaktuelles" title="Opens internal link in current window" class="internal-link">Weitere wichtige Neuigkeiten und Termine rund um die FH Aachen.</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                        <!--TYPO3SEARCH_end-->
+                    </div>
+                </div>
+            </div>
+        
+
+
+            <div id="FOOTER">
+                <div id="BREADCRUMB_FOOTER">
+                    
+    <div class="container">
+        
+            <ul class="menu-breadcrumb breadcrumbs">
+                
+                    
+
+
+        <li class=" siteroot aktiv current">
+            
+                    <span title="Sie befinden sich auf dieser Seite">FH Aachen</span>
+                
+        </li>
+    
+
+
+                    
+                
+            </ul>
+        
+    </div>
+
+                </div>
+                <div id="TOPNAV" class="mobil"><h2>FH Direkt</h2>bla</div>
+                <div id="INHALT_FOOTER">
+                    
+    <div class="SOCIAL">
+        <div style="width: 178px; height: 52px;">
+            <a href="https://fhac.de/facebook" target="_blank">
+                <img alt="facebook" src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/fuoFB.png"
+                     width="178" height="52" border="0">
+            </a>
+        </div>
+    </div>
+
+                    
+    <div class="STD NO_1">
+        
+    
+
+            <div id="c43" class="frame frame-default frame-type-text frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Kontakt
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    <p><b>FH Aachen<br></b>Postfach 100 560<br>52005 Aachen<br>T +49.241.6009 0<br>F +49.241.6009 51090</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                    
+    <div class="STD NO_2">
+        
+    
+
+            <div id="c173998" class="frame frame-default frame-type-menu_subpages frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Häufig besucht
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+        <ul>
+            
+                <li>
+                    <a href="/hochschule/studierendensekretariat/aktuelle-termine-fristen" title="Semesterbeginn">
+                        <span>Semesterbeginn</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/hochschule/allgemeine-studienberatung" title="Studienberatung">
+                        <span>Studienberatung</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/hochschule/bibliothek" title="Bibliothek">
+                        <span>Bibliothek</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/hochschule/studierendensekretariat" title="Studierendensekretariat">
+                        <span>Studierendensekretariat</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/pressestelle/presseaktuelles" title="Aktuelles">
+                        <span>Aktuelles</span>
+                    </a>
+                </li>
+            
+        </ul>
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                    
+    <div class="STD NO_3">
+        
+    
+
+            <div id="c41" class="frame frame-default frame-type-menu_subpages frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+    
+        <header>
+            
+
+    
+            <h2 class="">
+                Sonstiges
+            </h2>
+            
+        
+
+
+
+            
+
+
+
+        </header>
+    
+
+
+
+                
+                
+
+    
+        <ul>
+            
+                <li>
+                    <a href="/impressum" title="Impressum">
+                        <span>Impressum</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/datenschutz" title="Datenschutzerklärung">
+                        <span>Datenschutzerklärung</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/barrierefreiheit" title="Barrierefreiheit">
+                        <span>Barrierefreiheit</span>
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/sitemap" title="Sitemap">
+                        <span>Sitemap</span>
+                    </a>
+                </li>
+            
+        </ul>
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    </div>
+
+                </div>
+                
+<div class="LOGOS">
+    <div id="LOGO1_1" style="height:150px;margin-top: 18px;"
+         title="Logo System Akkreditiert">
+        <a href="https://akkreditierungsrat.de/de/akkreditierungssystem/systemakkreditierung/systemakkreditierung" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_akkreditierungsrat.png"
+            style="background-color:transparent;display:block;" width="202" height="150" border="0"></a>
+    </div>
+    <div id="LOGO1_2" style="height:55px;margin-top:64px;margin-left:9px;"
+         title="Logo HochschulAllianz für Angewandte Wissenschaften">
+        <a href="http://www.hawtech.de/" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_HAW-tech.png"
+            style="background-color:transparent;display:block;" width="202" height="55" border="0"></a>
+    </div>
+    <div id="LOGO1_3" style="height:102px;margin-top:34px;margin-left:9px;"
+         title="Logo FutureLab Aachen">
+        <a href="http://www.futurelab-aachen.de/" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_FutureLab.png"
+            style="background-color:transparent;display:block;" width="202" height="102" border="0"></a>
+    </div>
+    <div id="LOGO1_4" style="margin-top: 38px; height: 85px;"
+         title="Logo DG HOCH N">
+        <a href="https://www.dg-hochn.de/"
+           target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_DG_Hoch_N.png"
+            style="background-color:transparent;display:block;" width="202" height="122" border="0"></a>
+    </div>
+</div>
+<div class="LOGOS">
+    <div id="LOGO2_1" style="margin-top: 0px; height: 160px;">
+    </div>
+    <div id="LOGO2_2" style="margin-top: 0px; height: 160px;" title="Logo CHE-Ranking">
+        <a href="https://www.che.de/rankingsiegel" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_Ranking_Siegel_2022.png"
+            style="background-color:transparent;display:block;" width="202" height="160"
+            border="0"></a>
+    </div>
+    <div id="LOGO2_3" style="margin-top: 46px; height: 122px; display: block;"
+         title="Logo Observatory Magna Charta Universitatum">
+        <a href="http://www.magna-charta.org/" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_MC.png"
+            style="background-color:transparent;display:block;" width="202" height="81" border="0"></a>
+    </div>
+    <div id="LOGO2_4" style="margin-top: 0px; height: 160px;">
+    </div>
+</div>
+<div class="LOGOS">
+    <div id="LOGO3_1" style="margin-top: 60px; height: 65px;" title="Logo Familie in der Hochschule">
+        <a href="https://www.familie-in-der-hochschule.de/" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_FidH.jpg"
+            style="background-color:transparent;display:block;" width="202" height="65"
+            border="0"></a>
+    </div>
+    <div id="LOGO3_2" style="height:150px;margin-top: 18px;margin-left:9px;"
+         title="Logo audit Familiengerechte Hochschule">
+        <a href="/hochschule/gleichstellung/familiengerechte-hochschule/" target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_familiengerecht.png"
+            style="background-color:transparent;display:block;" width="202" height="150" border="0"></a>
+    </div>
+    <div id="LOGO3_3" style="margin-top: 60px; height: 64px;"
+         title="Logo Charta der Vielfalt">
+        <a href="https://www.charta-der-vielfalt.de"
+           target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_ChartaDerVielfalt.png"
+            style="background-color:transparent;display:block;" width="202" height="64" border="0"></a>
+    </div>
+    <div id="LOGO3_4" style="margin-top: 0px; height: 160px;"
+         title="Zertifikat 2022 – Vielfalt gestalten">
+        <a href="https://www.stifterverband.org/diversity-audit"
+           target="_blank"><img
+            src="/typo3conf/ext/fhac_design_2012/Resources/Public/Images/Logos/logo_Vielfalt_gestalten_2022.png"
+            style="background-color:transparent;display:block;" width="136" height="160" border="0"></a>
+    </div>
+</div>
+<div style="clear: both;"></div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- v:9.1.0-->
+
+    <!-- Matomo -->
+    <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setCookieDomain", "*.fh-aachen.de"]);
+        _paq.push(["setExcludedQueryParams", ["no_cache"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://stats.fh-aachen.de/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '4']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <noscript><p><img src="https://stats.fh-aachen.de/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Src/cookieConfig.js?1602052214"></script>
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Dist/in2cookiemodal.js?1601985385"></script>
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Dist/popper.min.js?1649071742"></script>
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Dist/bootstrap.min.js?1649071742"></script>
+
+<script src="/typo3conf/ext/fhac_design_2012/Resources/Public/JavaScript/Dist/scripts.js?1579708759"></script>
+<script src="/typo3conf/ext/powermail/Resources/Public/JavaScript/Libraries/jquery.datetimepicker.min.js?1664954704"></script>
+<script src="/typo3conf/ext/powermail/Resources/Public/JavaScript/Libraries/parsley.min.js?1664954704"></script>
+<script src="/typo3conf/ext/powermail/Resources/Public/JavaScript/Powermail/Tabs.min.js?1664954704"></script>
+<script src="/typo3conf/ext/powermail/Resources/Public/JavaScript/Powermail/Form.min.js?1664954704"></script>
+
+
+
+</body>
+</html>
