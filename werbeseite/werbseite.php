@@ -1,3 +1,7 @@
+<?php
+include 'gerichte.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +15,7 @@
 
     <header>
         <nav>
-            <img src="logo.png" alt="There was supposed to be a logo">
+            <img src="img/logo.png" alt="There was supposed to be a logo">
             <ul id="navigation">
                 <a href="#ankundigung"> <li> Ankündigung </li></a>
                 <a href="#speisen"> <li> Speisen </li></a>
@@ -26,7 +30,8 @@
 
         <section id="ankundigung">
             <h1>Bald gibt es Essen auch Online ;)</h1>
-            <img id="soon" src="coming_soon.gif" alt="This is an animated gif image, but it does not move" width=900/>
+            <img id="soon" src="img/coming_soon.gif" alt="This is an animated gif image, but it does not move" width="900"
+                 height="600">
         </section>
 
         <section id="speisen">
@@ -40,46 +45,14 @@
                 </tr>
                 </thead>
                 <tbody>
+                    <?php
+                    foreach($gerichte as $key): ?>
                 <tr>
-                    <td>Bunter Gemüseauflauf mit Schmand und Käse überbacken dazu eine Scheibe Schwarzbrot</td>
-                    <td>2.50</td>
-                    <td>3.70</td>
+                    <td> <?php echo htmlspecialchars($key['g_name']); ?></td>
+                    <td><?php echo htmlspecialchars($key['i_preis']); ?></td>
+                    <td><?php echo htmlspecialchars($key['e_preis']); ?></td>
                 </tr>
-                <tr>
-                    <td>Rindereintopf mit Rotwein und südländischen Kräutern</td>
-                    <td>2.80</td>
-                    <td>3.90</td>
-                </tr>
-                <tr>
-                    <td>Fischeintopf mit geräuchterem Forellenfillet auf dampfendem Gemüse</td>
-                    <td>3.50</td>
-                    <td>4.20</td>
-                </tr>
-                <tr>
-                    <td>Heiße Käsetunke mit geschmolzenem Käse in Brotlaib serviert</td>
-                    <td>2.20</td>
-                    <td>3.10</td>
-                </tr>
-                <tr>
-                    <td>Sphagetti mit Rindfrikaddelen und scharfe Tomatensoße oder cremige Pilzensoße</td>
-                    <td>2.60</td>
-                    <td>3.50</td>
-                </tr>
-                <tr>
-                    <td>Brattkartoffel mit Wienerschnitzel aus Schwein dazu Sauerkraut</td>
-                    <td>3.50</td>
-                    <td>4.20</td>
-                </tr>
-                <tr>
-                    <td>Käsekuchen</td>
-                    <td>2.00</td>
-                    <td>2.70</td>
-                </tr>
-                <tr>
-                    <td>Schwarzwalderschnitt</td>
-                    <td>2.10</td>
-                    <td>2.80</td>
-                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </section>

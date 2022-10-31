@@ -5,11 +5,7 @@
  * Vorname2, Nachname2, Matrikelnummer2
  */
 include 'm2_4a_standardparameter.php';
-function multiplication($a,$b){
-    for($i=1;  $i < $b-1; $i++){
-        $result = $result + addieren($a,$a);
-    }
-    return $result;
-}
 
-echo multiplication(5, 5);
+echo addieren(5); echo "<br>";
+echo addieren(1,1); echo "<br>";
+echo addieren(19,25); echo "<br>";

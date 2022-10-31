@@ -17,22 +17,14 @@ $famousMeals = [
 <body>
 <ol>
     <?php
-    foreach ($famousMeals as $key => $val) {
-        foreach($val as $tmp => $val2){
-            foreach ($val2 as $key1){
-                echo $key1['winner'];
-                /* echo "<li>";
-                echo $tmp['name'];
-                echo "<br>";
-                print_r($tmp['winner']) ;
-                "</li>";*/
-            }
-
-
-
+    foreach ($famousMeals as $key) {
+         {
+            echo "<li>";
+            echo $key['name'];
+            echo "<br>";
+            echo $key['winner'];
+            echo "</li>";
         }
-        echo $val['winner'];
-
     }
     ?>
 </ol>
