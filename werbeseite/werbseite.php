@@ -87,6 +87,77 @@ include 'gerichte.php';
                 <button id="btn_anmd" type="submit" form="newsletter" value="test" disabled="disabled">Zum Newsletter anmelden</button>
             </form>
         </section>
+        <p id="feedback_newsletter">
+            <?php
+            if(isset($_POST) && isset($_POST["name"]))
+            {
+                $blacklist = ["rcpt.at", "damnthespam.at", "wegwerfmail.de", "trashmail.de", "trahsmail.com"];
+                $back_array = $_POST;
+
+                $email_extension_check = explode("@",$_POST["email"]);
+                $email_extension_check = $email_extension_check[1];
+
+
+                $email_check = true;
+                $name_check = true;
+                $dtn_check = true;
+
+                foreach($blacklist as $value)
+                {
+                    if($value === $email_extension_check) {
+                        echo "ungültiger Email-Provider";
+                        $email_check = false;
+
+                    }
+                }
+
+                $email = $_POST["email"];
+                $name = $_POST["name"];
+                $dtnschutz = $_POST["dtschutz"];
+
+                if(trim($_POST["name"], " \n\r\t\v\x00") === "")
+                {
+
+                    echo "Der Name: $name darf nicht leer sein.";
+                    $name_check = false;
+                }
+                if(!filter_var($email, FILTER_VALIDATE_EMAIL))
+                {
+                    echo "Die Email: $email ist nicht valide.";
+                    $email_check = false;
+                }
+                if(!($_POST["dtschutz"] === "on"))
+                {
+                    echo "Den Datenschutzbestimmungen wurde nicht zugestimmt.";
+                    $dtn_check  = false;
+                }
+
+
+                $file = fopen("./newsletteranmeldung.txt", "a");
+
+                if(!$file){
+                    die("Öffnen der Datei 'newsletteranmeldung.txt' war nicht erfolgreich");
+                }
+                if($email_check && $name_check && $dtn_check)
+                {
+                    foreach($back_array as $key => $value)
+                    {
+                        $line = "$key;$value\n";
+                        fwrite($file,$line);
+
+                    }
+                    echo "Speicherung der Daten erfolgreich.";
+                }
+
+                fclose($file);
+
+
+
+
+            }
+            ?>
+
+        </p>
 
         <section id="wichtig">
             <h1>Das ist uns wichtig</h1>
