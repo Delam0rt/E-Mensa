@@ -1,7 +1,5 @@
 <?php
 include 'gerichte.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +97,6 @@ include 'gerichte.php';
                 $email_extension_check = explode("@",$_POST["email"]);
                 $email_extension_check = $email_extension_check[1];
 
-
                 $email_check = true;
                 $name_check = true;
                 $dtn_check = true;
@@ -109,7 +106,6 @@ include 'gerichte.php';
                     if($value === $email_extension_check) {
                         echo "ungültiger Email-Provider";
                         $email_check = false;
-
                     }
                 }
 
@@ -134,7 +130,6 @@ include 'gerichte.php';
                     $dtn_check  = false;
                 }
 
-
                 $file = fopen("./newsletteranmeldung.txt", "a");
 
                 if(!$file){
@@ -146,16 +141,10 @@ include 'gerichte.php';
                     {
                         $line = "$key;$value\n";
                         fwrite($file,$line);
-
                     }
                     echo "Speicherung der Daten erfolgreich.";
                 }
-
                 fclose($file);
-
-
-
-
             }
             ?>
 
