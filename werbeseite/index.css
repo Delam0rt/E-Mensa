@@ -100,3 +100,8 @@ footer li{
 footer li:first-child{
     border: none;
 }
+
+#feedback_newletter{
+    color: red;
+    padding-left: 45px;
+}
