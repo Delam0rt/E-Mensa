@@ -1,5 +1,7 @@
 <?php
 include 'gerichte.php';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +68,7 @@ include 'gerichte.php';
 
         <section id="kontakt">
             <h1>Interesse geweckt? Wir informieren Sie!</h1>
-            <form method="post" id="newsletter">
+            <form method="post" id="newsletter" name="newsletter">
 
                 <label class="oberschrifft" for="name">Ihr Name:</label>
                 <input class="oberschrifftbox" type="text" id="name" name="name" required>
@@ -82,7 +84,7 @@ include 'gerichte.php';
                 <br><br><br>
                 <input type="checkbox" id="dtschutz" name="dtschutz" required>
                 <label for="dtschutz">Den Datenschutzbestimmungen stimme ich zu</label>
-                <button id="btn_anmd" type="submit" form="newsletter" value="test" disabled="disabled">Zum Newsletter anmelden</button>
+                <button id="btn_anmd" type="submit" form="newsletter" value="test" >Zum Newsletter anmelden</button>
             </form>
         </section>
         <p id="feedback_newsletter">
