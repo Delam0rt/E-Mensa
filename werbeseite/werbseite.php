@@ -15,7 +15,7 @@ include 'gerichte.php';
 
     <header>
         <nav>
-            <img src="img/logo.png" alt="There was supposed to be a logo">
+            <img src="logo.png" alt="There was supposed to be a logo">
             <ul id="navigation">
                 <a href="#ankundigung"> <li> Ankündigung </li></a>
                 <a href="#speisen"> <li> Speisen </li></a>
@@ -30,7 +30,7 @@ include 'gerichte.php';
 
         <section id="ankundigung">
             <h1>Bald gibt es Essen auch Online ;)</h1>
-            <img id="soon" src="img/coming_soon.gif" alt="This is an animated gif image, but it does not move" width="900"
+            <img id="soon" src="coming_soon.gif" alt="This is an animated gif image, but it does not move" width="800"
                  height="600">
         </section>
 
@@ -42,17 +42,19 @@ include 'gerichte.php';
                     <th>Gericht</th>
                     <th>Preis intern</th>
                     <th>Preis extern</th>
+                    <th>Bild</th>
                 </tr>
                 </thead>
                 <tbody>
                     <?php
                     foreach($gerichte as $key): ?>
                 <tr>
-                    <td> <?php echo htmlspecialchars($key['g_name']); ?></td>
-                    <td><?php echo htmlspecialchars($key['i_preis']); ?></td>
-                    <td><?php echo htmlspecialchars($key['e_preis']); ?></td>
+                    <td> <?php echo ($key['g_name']); ?></td>
+                    <td><?php echo ($key['i_preis']); ?></td>
+                    <td><?php echo ($key['e_preis']); ?></td>
+                    <td><?php echo ($key['bild']); ?></td>
                 </tr>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </section>

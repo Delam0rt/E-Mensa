@@ -67,13 +67,13 @@ th{
 td:not(:first-child){
     text-align: center;
 }
-tr:nth-child(even) {
-    background-color: cadetblue;
-    color: white;
-}
 tr:nth-child(odd) {
     background-color: white;
     color: cadetblue;
+}
+tr:nth-child(even) {
+    background-color: cadetblue;
+    color: white;
 }
 
 #btn_anmd{
