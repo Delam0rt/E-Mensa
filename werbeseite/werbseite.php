@@ -1,5 +1,33 @@
 <?php
 include 'gerichte.php';
+
+$link = mysqli_connect(
+        "127.0.0.1",
+             "root",
+             "root",
+    "emensawerbeseite",
+            "3306"
+);
+
+if(!$link)
+{
+    echo "Vebindung fehlgeschlagen: ", mysqli_connect_error();
+    exit();
+}
+
+$sql_query_5_1 = "SELECT name, preis_intern, preis_extern FROM gericht GROUP BY name ASC LIMIT 5;";
+$result_5_1 = mysqli_query($link, $sql_query_5_1);
+
+$sql_query_5_2 = "SELECT name, preis_intern, preis_extern, gha.code FROM gericht
+JOIN gericht_hat_allergen gha on gericht.id = gha.gericht_id
+GROUP BY RAND() ASC LIMIT 5;";
+$result_5_2 = mysqli_query($link, $sql_query_5_2);
+
+$sql_query_allergen = "SELECT unique(code) FROM allergen;";
+$result_allergen = mysqli_query($link, $sql_query_allergen);
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -42,21 +70,38 @@ include 'gerichte.php';
                     <th>Gericht</th>
                     <th>Preis intern</th>
                     <th>Preis extern</th>
+                    <th>Allergen</th>
                     <th>Bild</th>
                 </tr>
                 </thead>
                 <tbody>
                     <?php
-                    foreach($gerichte as $key): ?>
-                <tr>
-                    <td> <?php echo ($key['g_name']); ?></td>
-                    <td><?php echo ($key['i_preis']); ?></td>
-                    <td><?php echo ($key['e_preis']); ?></td>
-                    <td><?php echo ($key['bild']); ?></td>
-                </tr>
-                    <?php endforeach; ?>
+                    while($row = mysqli_fetch_assoc($result_5_2))
+                    {
+                     echo      " <tr>".
+                            "<td>".$row['name']."</td>".
+                           " <td>".$row['preis_intern']."</td>".
+                           " <td>".$row['preis_extern']."</td>".
+                            "<td>".$row['code']."</td>".
+                            //"<td>".$key['bild']</td>
+                           "</tr>";
+
+                    }
+
+                    mysqli_free_result($result_5_2);
+                    ?>
+
                 </tbody>
             </table>
+            <ul id="allergen">
+                <p>verw. Allergene:</p>
+                <?php
+                while($row = mysqli_fetch_assoc($result_allergen)){
+
+                    echo "<li>".$row['code']."</li>"." ";
+                }
+                ?>
+            </ul>
         </section>
 
         <section id="zahlen">

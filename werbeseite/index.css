@@ -15,6 +15,14 @@ nav {
     border-bottom: 1px solid black;
 }
 
+#ankundigung{
+    text-align: center;
+}
+
+#speisen{
+    text-align: center;
+}
+
 ul:not(h1+ul){
     padding: 0;
 }
@@ -101,7 +109,36 @@ footer li:first-child{
     border: none;
 }
 
-#feedback_newletter{
+#zahlen{
+    text-align: center;
+}
+
+#kontakt{
+    text-align: center;
+}
+
+
+#feedback_newsletter{
     color: red;
     padding-left: 45px;
+    text-align: center;
+}
+
+#wichtig{
+    text-align: center;
+}
+#allergen{
+    margin-top: 0em;
+}
+
+#allergen p{
+    display: inline-block;
+    font-style: italic;
+    font-size: x-small;
+}
+
+#allergen li{
+    display: inline-block;
+    font-style: italic;
+    font-size: x-small;
 }
