@@ -1,6 +1,15 @@
 <?php
+
+/**
+ *Praktikum DBWT. Autoren:
+ *Ivan, Volkov, 3519680
+ *Max, Gerdes, 3516014
+ */
+
+// Datei mit den gerichten in einem Array gespeichert
 include 'gerichte.php';
 
+// MySql verbindung herstellen
 $link = mysqli_connect(
         "127.0.0.1",
              "root",
@@ -9,6 +18,8 @@ $link = mysqli_connect(
             "3306"
 );
 
+// überprüfung auf erfolgreiche Verbindung
+// link == false wenn Verbindung fehlgeschlagen.
 if(!$link)
 {
     echo "Vebindung fehlgeschlagen: ", mysqli_connect_error();
@@ -36,6 +47,8 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
 <head>
     <meta charset="UTF-8">
     <title>Ihre E-Mensa</title>
+
+    <!-- Einbindung des externen Stylesheets-->
     <link href="index.css" rel="stylesheet">
 </head>
 
@@ -43,6 +56,8 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
 
     <header>
         <nav>
+            <!-- Darstellung der Links oben auf der Webseite.
+                  Dienen der Navigation auf die einzelnen Elemente.-->
             <img src="logo.png" alt="There was supposed to be a logo">
             <ul id="navigation">
                 <a href="#ankundigung"> <li> Ankündigung </li></a>
@@ -55,13 +70,15 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
     </header>
 
     <main>
-
+        <!-- Platzhalter für kommende Elemente-->
         <section id="ankundigung">
             <h1>Bald gibt es Essen auch Online ;)</h1>
             <img id="soon" src="coming_soon.gif" alt="This is an animated gif image, but it does not move" width="800"
                  height="600">
         </section>
 
+        <!-- Tabellen Darstellung der Gerichte aus der Datenbank
+        -->
         <section id="speisen">
             <h1>Köstlichkeiten, die Sie erwarten</h1>
             <table id="speisekarte">
@@ -93,6 +110,9 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
 
                 </tbody>
             </table>
+
+            <!-- Darstellung der in allen Gerichten enthalten Allergene.
+             Daten stammen aus MySql Datenbank-->
             <ul id="allergen">
                 <p>verw. Allergene:</p>
                 <?php
@@ -104,6 +124,8 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             </ul>
         </section>
 
+        <!-- Dynamische Anzeige der Anzahl der Besucherinnen, Gerichte
+            und Newsletter -->
         <section id="zahlen">
             <h1>E-Mensa in Zahlen</h1>
             <label> x Besuche</label>
@@ -132,6 +154,11 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                 <button id="btn_anmd" type="submit" form="newsletter" value="test" >Zum Newsletter anmelden</button>
             </form>
         </section>
+        <!-- Eingabe der Daten für die Anmeldung der Newsletter
+            -> Filterung der Emails die auf der Blacklist stehen.
+            -> Überprüfung ob jedes Feld eine gültige Eingabe enthält.
+            -> Speicherung der Daten nach erfolgreicher Überprüfung in
+                "newsletter.txt". -->
         <p id="feedback_newsletter">
             <?php
             if(isset($_POST) && isset($_POST["name"]))
@@ -194,7 +221,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             ?>
 
         </p>
-
+        <!-- Das ist uns Wichtig section-->
         <section id="wichtig">
             <h1>Das ist uns wichtig</h1>
             <ul>
@@ -207,7 +234,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
     </main>
 
     <footer>
-
+        <!-- Author,Impressum, Firmenname -->
         <ul class="horizontal-list">
             <li>(c) E-Mensa GmbH</li>
             <li>Ivan Volkov</li>
