@@ -137,6 +137,8 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             <h1>Interesse geweckt? Wir informieren Sie!</h1>
             <form method="post" id="newsletter" name="newsletter">
 
+                <!-- Alle Eingaben sind Pflicht und werden Serverseitig
+                    nochmals auf gültigkeit gecheckt -->
                 <label class="oberschrifft" for="name">Ihr Name:</label>
                 <input class="oberschrifftbox" type="text" id="name" name="name" required>
 
@@ -154,6 +156,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                 <button id="btn_anmd" type="submit" form="newsletter" value="test" >Zum Newsletter anmelden</button>
             </form>
         </section>
+
         <!-- Eingabe der Daten für die Anmeldung der Newsletter
             -> Filterung der Emails die auf der Blacklist stehen.
             -> Überprüfung ob jedes Feld eine gültige Eingabe enthält.
