@@ -130,7 +130,17 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             <h1>E-Mensa in Zahlen</h1>
             <label> x Besuche</label>
             <label> y Anmeldungen zum Newsletter</label>
-            <label> z Speisen</label>
+            <label id="visitor"> <?php
+
+                $remote_adr = $_SERVER['REMOTE_ADDR'];
+                $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
+                $result_var = $remote_adr." ".$http_user_agent;
+                $sql_query_9_3 = mysqli_query($link,"INSERT INTO anzahl_besucher VALUES(b_id,'$result_var')");
+
+                $count_visitor_result = mysqli_query($link,"SELECT b_id from anzahl_besucher");
+                $count_besuche = mysqli_num_rows($count_visitor_result);
+                echo $count_besuche;
+                ?> Besucher</label>
         </section>
 
         <section id="kontakt">
