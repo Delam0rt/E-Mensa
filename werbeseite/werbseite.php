@@ -122,7 +122,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
         </section>
 
         <!-- Dynamische Anzeige der Anzahl der Besucherinnen, Gerichte
-            und Newsletter -->
+            und Newsletter blabla-->
         <section id="zahlen">
             <h1>E-Mensa in Zahlen</h1>
             <label> <?php
