@@ -125,38 +125,42 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             und Newsletter blabla-->
         <section id="zahlen">
             <h1>E-Mensa in Zahlen</h1>
-            <label> <?php
+
+            <label class="zahlen"> <?php
                 $sql="SELECT name FROM gericht";
                 if ($result=mysqli_query($link,$sql))
                 {
                     // Return the number of rows in result set
                     $rowcount=mysqli_num_rows($result);
-                    printf($rowcount . " Gerichte");
+                    printf($rowcount);
                     // Free result set
                     mysqli_free_result($result);
-                }?>
-            </label>
-            <label>  <?php
+                }?> </label> <label> Gerichte </label>
+
+            <label class="zahlen">  <?php
                 $sql="SELECT email FROM anmeldungen";
                 if ($result=mysqli_query($link,$sql))
                 {
                     // Return the number of rows in result set
                     $rowcount=mysqli_num_rows($result);
-                    printf($rowcount . " Anmeldungen");
+                    printf($rowcount);
                     // Free result set
                     mysqli_free_result($result);
-                }?></label>
-            <label id="visitor"> <?php
+                }?> </label> <label> Anmeldungen </label>
 
+            <label class="zahlen"> <?php
+                date_default_timezone_set("Europe/Berlin");
+                $date = date("Y-m-d H:i:s");
                 $remote_adr = $_SERVER['REMOTE_ADDR'];
                 $http_user_agent = $_SERVER['HTTP_USER_AGENT'];
                 $result_var = $remote_adr." ".$http_user_agent;
-                $sql_query_9_3 = mysqli_query($link,"INSERT INTO anzahl_besucher VALUES(b_id,'$result_var')");
+                $sql_query_9_3 = mysqli_query($link,"INSERT INTO anzahl_besucher VALUES(b_id,'$result_var', '$date')");
 
-                $count_visitor_result = mysqli_query($link,"SELECT b_id from anzahl_besucher");
+                $count_visitor_result = mysqli_query($link,"SELECT b_id FROM anzahl_besucher");
                 $count_besuche = mysqli_num_rows($count_visitor_result);
                 echo $count_besuche;
-                ?> Besucher</label>
+                ?> </label> <label> Besucher </label>
+
         </section>
 
         <section id="kontakt">
@@ -226,6 +230,14 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                     $dtn_check = false;
                 }
 
+            if ($email_check && $name_check && $dtn_check) {
+                $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
+                mysqli_query($link, $insertquery);
+            }
+
+            }
+
+            /*
                 $file = fopen("./newsletteranmeldung.txt", "a");
 
                 if (!$file) {
@@ -238,12 +250,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                     }
                 }
                 fclose($file);
-            if ($email_check && $name_check && $dtn_check) {
-                $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
-                mysqli_query($link, $insertquery);
-            }
-
-            }
+                */
             ?>
 
         </p>

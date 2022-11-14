@@ -62,9 +62,15 @@ section{
     top: 20px
 }
 
+.zahlen{
+    color: cadetblue;
+}
+
 #speisekarte{
     border: 3px solid cadetblue;
     padding: 1px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th{
@@ -124,9 +130,13 @@ footer li:first-child{
     text-align: center;
 }
 
-#wichtig{
+#wichtig
+{
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 #allergen{
     margin-top: 0em;
 }
