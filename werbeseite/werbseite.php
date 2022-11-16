@@ -149,6 +149,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                     // Return the number of rows in result set
                     $rowcount=mysqli_num_rows($result);
                     printf($rowcount);
+
                     // Free result set
                     mysqli_free_result($result);
                 }?> </label> <label> Anmeldungen </label>
@@ -235,10 +236,28 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                     $dtn_check = false;
                 }
 
-            if ($email_check && $name_check && $dtn_check) {
-                $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
-                mysqli_query($link, $insertquery);
+            $double_entry = "SELECT name,email FROM anmeldungen WHERE email = '$email';";
+            $double_entry =  mysqli_fetch_assoc(mysqli_query($link, $double_entry));
+
+
+
+            if ($email_check && $name_check && $dtn_check)
+            {
+
+                if($double_entry ||  ["name"] === $name && $double_entry["email"] === $email){
+                    //echo "Es gibt schon einen Account mit dieser E-Mail.";
+                }
+                else
+                {
+                    $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
+                    mysqli_query($link, $insertquery);
+
+                }
+
+
+
             }
+
 
             }
             ?>
