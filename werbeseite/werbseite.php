@@ -13,8 +13,8 @@ include 'gerichte.php';
 $link = mysqli_connect(
         "127.0.0.1",
              "root",
-             "dbwt",
-    "emensawebeseite",
+             "root",
+    "emensawerbeseite",
             "3306"
 );
 
@@ -32,9 +32,14 @@ $result_5_1 = mysqli_query($link, $sql_query_5_1);
 $sql_query_5_2 = "SELECT name, preis_intern, preis_extern, gha.code FROM gericht
 JOIN gericht_hat_allergen gha on gericht.id = gha.gericht_id
 GROUP BY RAND() ASC LIMIT 5;";
-$result_5_2 = mysqli_query($link, $sql_query_5_2);
 
-$sql_query_allergen = "SELECT unique(code) FROM allergen;";
+$sql_query_5_2_2 = "SELECT DISTINCT gericht.name,gericht.preis_intern, gericht.preis_extern, GROUP_CONCAT(gericht_hat_allergen.code) as code FROM gericht
+JOIN gericht_hat_allergen on gericht.id = gericht_hat_allergen.gericht_id
+GROUP BY id
+ORDER BY RAND() LIMIT 5;";
+$result_5_2 = mysqli_query($link, $sql_query_5_2_2);
+
+$sql_query_allergen = "SELECT unique(code),name as allergen FROM allergen;";
 $result_allergen = mysqli_query($link, $sql_query_allergen);
 ?>
 
@@ -115,7 +120,7 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                 <?php
                 while($row = mysqli_fetch_assoc($result_allergen)){
 
-                    echo "<li>".$row['code']."</li>"." ";
+                    echo "<li>".$row['code']."</li>".""."<li>".$row['allergen']."</li>";
                 }
                 ?>
             </ul>
@@ -236,21 +241,6 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             }
 
             }
-
-            /*
-                $file = fopen("./newsletteranmeldung.txt", "a");
-
-                if (!$file) {
-                    die("Öffnen der Datei 'newsletteranmeldung.txt' war nicht erfolgreich");
-                }
-                if ($email_check && $name_check && $dtn_check) {
-                    foreach ($back_array as $key => $value) {
-                        $line = "$key;$value\n";
-                        fwrite($file, $line);
-                    }
-                }
-                fclose($file);
-                */
             ?>
 
         </p>
