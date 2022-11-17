@@ -13,13 +13,13 @@ include 'gerichte.php';
 $link = mysqli_connect(
         "127.0.0.1",
              "root",
-             "root",
-    "emensawerbeseite",
+             "dbwt",
+    "emensawebeseite",
             "3306"
 );
 
 // überprüfung auf erfolgreiche Verbindung
-// link == false wenn Verbindung fehlgeschlagen.
+// link == false, wenn Verbindung fehlgeschlagen.
 if(!$link)
 {
     echo "Vebindung fehlgeschlagen: ", mysqli_connect_error();
@@ -116,18 +116,17 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             <!-- Darstellung der in allen Gerichten enthalten Allergene.
              Daten stammen aus MySql Datenbank-->
             <ul id="allergen">
-                <p>verw. Allergene:</p>
+                <label>verw. Allergene:</label>
                 <?php
                 while($row = mysqli_fetch_assoc($result_allergen)){
-
-                    echo "<li>".$row['code']."</li>".""."<li>".$row['allergen']."</li>";
+                    echo "<li id='acode'>" . $row['code'] . "</li>" . "-" . "<li>" . $row['allergen'] . "</li>";
                 }
                 ?>
             </ul>
         </section>
 
         <!-- Dynamische Anzeige der Anzahl der Besucherinnen, Gerichte
-            und Newsletter blabla-->
+            und Newsletter-->
         <section id="zahlen">
             <h1>E-Mensa in Zahlen</h1>
 
@@ -190,79 +189,69 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
                 <input type="checkbox" id="dtschutz" name="dtschutz" required>
                 <label for="dtschutz">Den Datenschutzbestimmungen stimme ich zu</label>
                 <button id="btn_anmd" type="submit" form="newsletter" value="test" >Zum Newsletter anmelden</button>
+
+                <!-- Eingabe der Daten für die Anmeldung der Newsletter
+            → Filterung der E-Mails die auf der Blacklist stehen.
+            → Überprüfung, ob jedes Feld eine gültige Eingabe enthält.
+            → Speicherung der Daten nach erfolgreicher Überprüfung in
+                "anmeldungen". -->
+                <div id="feedback_newsletter">
+                    <?php
+                    if(isset($_POST) && isset($_POST["name"])) {
+                        $blacklist = ["rcpt.at", "damnthespam.at", "wegwerfmail.de", "trashmail.de", "trahsmail.com"];
+                        $back_array = $_POST;
+
+                        $email_extension_check = explode("@", $_POST["email"]);
+                        $email_extension_check = $email_extension_check[1];
+
+                        $email_check = true;
+                        $name_check = true;
+                        $dtn_check = true;
+
+                        foreach ($blacklist as $value) {
+                            if ($value === $email_extension_check) {
+                                echo "ungültiger Email-Provider";
+                                $email_check = false;
+                            }
+                        }
+
+                        $email = $_POST["email"];
+                        $name = $_POST["name"];
+                        $dtnschutz = $_POST["dtschutz"];
+
+                        if (trim($_POST["name"], " \n\r\t\v\x00") === "") {
+
+                            echo "Der Name: $name darf nicht leer sein.";
+                            $name_check = false;
+                        }
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                            echo "Die Email: $email ist nicht valide.";
+                            $email_check = false;
+                        }
+                        if (!($_POST["dtschutz"] === "on")) {
+                            echo "Den Datenschutzbestimmungen wurde nicht zugestimmt.";
+                            $dtn_check = false;
+                        }
+
+                        $double_entry = "SELECT name,email FROM anmeldungen WHERE email = '$email';";
+                        $double_entry = mysqli_fetch_assoc(mysqli_query($link, $double_entry));
+
+
+                        if ($email_check && $name_check && $dtn_check) {
+                            if ($double_entry || ["name"] === $name && $double_entry["email"] === $email) {
+                                echo "Es gibt schon einen Account mit dieser E-Mail.";
+                            } else {
+                                $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
+                                mysqli_query($link, $insertquery);
+                                echo "Ihre Anmeldung wurde erfolgreich durchgeführt";
+                            }
+                        }
+                    }
+                    ?>
+                </div>
             </form>
         </section>
 
-        <!-- Eingabe der Daten für die Anmeldung der Newsletter
-            -> Filterung der Emails die auf der Blacklist stehen.
-            -> Überprüfung ob jedes Feld eine gültige Eingabe enthält.
-            -> Speicherung der Daten nach erfolgreicher Überprüfung in
-                "newsletter.txt". -->
-        <p id="feedback_newsletter">
-            <?php
-            if(isset($_POST) && isset($_POST["name"])) {
-                $blacklist = ["rcpt.at", "damnthespam.at", "wegwerfmail.de", "trashmail.de", "trahsmail.com"];
-                $back_array = $_POST;
-
-                $email_extension_check = explode("@", $_POST["email"]);
-                $email_extension_check = $email_extension_check[1];
-
-                $email_check = true;
-                $name_check = true;
-                $dtn_check = true;
-
-                foreach ($blacklist as $value) {
-                    if ($value === $email_extension_check) {
-                        echo "ungültiger Email-Provider";
-                        $email_check = false;
-                    }
-                }
-
-                $email = $_POST["email"];
-                $name = $_POST["name"];
-                $dtnschutz = $_POST["dtschutz"];
-
-                if (trim($_POST["name"], " \n\r\t\v\x00") === "") {
-
-                    echo "Der Name: $name darf nicht leer sein.";
-                    $name_check = false;
-                }
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    echo "Die Email: $email ist nicht valide.";
-                    $email_check = false;
-                }
-                if (!($_POST["dtschutz"] === "on")) {
-                    echo "Den Datenschutzbestimmungen wurde nicht zugestimmt.";
-                    $dtn_check = false;
-                }
-
-            $double_entry = "SELECT name,email FROM anmeldungen WHERE email = '$email';";
-            $double_entry =  mysqli_fetch_assoc(mysqli_query($link, $double_entry));
-
-
-
-            if ($email_check && $name_check && $dtn_check)
-            {
-
-                if($double_entry ||  ["name"] === $name && $double_entry["email"] === $email){
-                    //echo "Es gibt schon einen Account mit dieser E-Mail.";
-                }
-                else
-                {
-                    $insertquery = "INSERT INTO anmeldungen VALUES ('$name', '$email')";
-                    mysqli_query($link, $insertquery);
-
-                }
-
-
-
-            }
-
-
-            }
-            ?>
-
-        </p>
         <!-- Das ist uns Wichtig section-->
         <section id="wichtig">
             <h1>Das ist uns wichtig</h1>
@@ -283,9 +272,6 @@ $result_allergen = mysqli_query($link, $sql_query_allergen);
             <li>Max Gerdes</li>
             <li>Impressum</li>
         </ul>
-
     </footer>
-
 </body>
-
 </html>

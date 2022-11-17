@@ -138,17 +138,17 @@ footer li:first-child{
 }
 
 #allergen{
-    margin-top: 0em;
-}
-
-#allergen p{
-    display: inline-block;
+    list-style: none;
+    font-size: small;
     font-style: italic;
-    font-size: x-small;
 }
 
 #allergen li{
     display: inline-block;
-    font-style: italic;
-    font-size: x-small;
+    padding-inline: 5px;
 }
+
+#acode{
+    color: cadetblue;
+}
+
